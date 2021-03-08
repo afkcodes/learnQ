@@ -67,7 +67,7 @@ const questions = [
     },
     {
         id: "8",
-        Question: "The\\ side\\ length\\ of\\ the\\ top\\ of\\ a\\ square\\ table\\ is\\ x\\.\\ The\\ expression\\ for\\ perimeter\\ is:\\",
+        Question: "The\\ side\\ length\\ of\\ the\\ top\\ of\\ a\\ square\\ table\\ is\\ x\\ The\\ expression\\ for\\ perimeter\\ is:\\",
         Option1: "4 + x",
         Option2: "2x",
         Option3: "4x",

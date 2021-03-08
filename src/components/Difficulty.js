@@ -1,9 +1,6 @@
 import React from "react";
-import questions from "../res/data/questions";
 
 function Difficulty({ quizdata, status }) {
-  const [difficulty, setDifficulty] = React.useState("Easy");
-
   return (
     <div className="difficulty__select">
       <select
@@ -11,15 +8,7 @@ function Difficulty({ quizdata, status }) {
         defaultValue={"DEFAULT"}
         onChange={(e) => {
           console.log(e.target.value);
-          setDifficulty(e.target.value);
-          quizdata(
-            questions
-              .filter(function (obj) {
-                return obj.DifficultyLevel === difficulty;
-              })
-              .sort(() => 0.5 - Math.random())
-              .slice(0, 4)
-          );
+          quizdata(e.target.value);
           status("started");
         }}
       >

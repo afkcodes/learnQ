@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Difficulty from "./components/Difficulty";
 import { MathComponent } from "mathjax-react";
-
+import questions from "../src/res/data/questions";
 
 function App() {
   const [quizStatus, setQuizStatus] = React.useState("opened");
@@ -38,7 +38,16 @@ function App() {
     console.log(userAnswerArr, correctAnswerArr);
   };
 
-  const getQuizQuestions = (question) => {
+  const getQuizQuestions = (diff) => {
+    const question = questions
+      .filter(function (obj) {
+        return obj.DifficultyLevel === diff;
+      })
+      .sort(() => 0.5 - Math.random())
+      .slice(0, 4);
+
+    console.log(question);
+
     let correctAnswerArr = quizState.correctAnswer;
     for (let i = 0; i < 4; i++) {
       correctAnswerArr[i] = question[i].CorrectOption;
@@ -79,7 +88,11 @@ function App() {
   return (
     <div className="App">
       {quizStatus === "opened" ? (
-        <Difficulty quizdata={getQuizQuestions} status={setStatus} />
+        <>
+          <div className="main__header">LearnQ Quiz</div>
+
+          <Difficulty quizdata={getQuizQuestions} status={setStatus} />
+        </>
       ) : quizStatus === "started" ? (
         <div className="quiz__container">
           <div className="quiz__question">
@@ -201,20 +214,22 @@ function App() {
           </div>
           <div className="score__details">
             <p>Score: {score}</p>
-            <p>Percentage Score: {percentScore}</p>
+            <p>Percentage Score: {percentScore}%</p>
           </div>
           {quizState.quizQuestions.map((question) => {
             return (
-              <div key={question.id} className="question__container">
-                <div className="user__question">
-                  <div>
+              <div key={question.id} className="result_details">
+                <div className="result_question">
+                  <span className="result_question_text">
                     <MathComponent
                       className="option_mathjax"
                       tex={String.raw`${question.Question}`}
                       display={false}
                     />
-                  </div>
-                  <div>
+                  </span>
+                </div>
+                <div className="result_answer">
+                  <span className="result_question_text">
                     Answer:&nbsp; &nbsp; &nbsp;
                     <MathComponent
                       className="option_mathjax"
@@ -223,11 +238,9 @@ function App() {
                       }`}
                       display={false}
                     />
-                  </div>
-                  <div>
-                    {question.DifficultyLevel}
-                  </div>
+                  </span>
                 </div>
+                <div className="result_diff">{question.DifficultyLevel}</div>
               </div>
             );
           })}
