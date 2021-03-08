@@ -1,7 +1,7 @@
 .App {
   display: flex;
   flex-direction: column;
-  background: #dddddd;
+  background: #f1f1f1;
   align-items: center;
   height: 100vh;
 }
@@ -12,7 +12,7 @@
 
 .diff__select {
   margin: 55px;
-  width: 650px;
+  width: 60%;
   padding: 5px 35px 5px 5px;
   font-size: 16px;
   outline: none;
@@ -24,6 +24,7 @@
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .quiz__container {
   /* background: green; */
@@ -42,6 +43,7 @@ form {
   padding-left: 1.2em;
   flex-direction: column;
   color: azure;
+  align-items: center;
 }
 .quiz__options {
   flex: 4;
@@ -56,7 +58,7 @@ form {
   width: 80%;
   margin-top: 0.8em;
   cursor: pointer;
-  border-radius: 1em;
+  border-radius: 0.2em;
   color: azure;
 }
 .options__text {
@@ -80,4 +82,52 @@ form {
   margin: 1.2em;
   background: #d6efc7;
   cursor: pointer;
+  border-radius: 0.2em;
+}
+
+.results {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+}
+
+.answers__container {
+  width: 100%;
+  display: flex;
+  height: 5em;
+  justify-content: space-evenly;
+}
+.answer {
+  height: 5em;
+}
+
+.score__details {
+  height: 5em;
+  font-weight: bold;
+  font-size: 1.2em;
+  line-height: 2;
+  background: #383e56;
+  color: white;
+  padding-left: 1.2em;
+}
+
+.user__question {
+  height: 4em;
+  background: #f0e4d7;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2em;
+  align-items: center;
+  font-size: 1.2em;
+  flex-wrap: wrap;
+}
+.results__header {
+  font-size: 2em;
+  height: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #383e56;
+  color: white;
 }

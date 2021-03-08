@@ -1,18 +1,18 @@
 const questions = [
     {
         id: "2",
-        Question: "An algebraic expression containing three terms is called a",
+        Question: "An\\ algebraic\\ expression\\ containing\\ three\\ terms\\ is\\ called\\ a\\",
         Option1: "monomial",
         Option2: "binomial",
         Option3: "trinomial",
-        Option4: "all of these",
+        Option4: "all\\ of\\ these",
         CorrectOption: "3",
         MarksAllocated: "1",
         DifficultyLevel: "Easy"
     },
     {
         id: "3",
-        Question: "Number of terms in the expression 3.x^2.y - 2.y^2.z - z^2.x + 5 is",
+        Question: "Number\\ of\\ terms\\ in\\ the\\ expression\\ 3.x^2.y - 2.y^2.z - z^2.x + 5 \\  is",
         Option1: "2",
         Option2: "3",
         Option3: "4",
@@ -23,18 +23,18 @@ const questions = [
     },
     {
         id: "4",
-        Question: "The terms of expression 4.x^2 - 3.x.y are:",
-        Option1: "4.x^2 and -3.x.y",
-        Option2: "4.x^2 and 3.x.y",
-        Option3: "4.x^2 and -x.y",
-        Option4: "x^2 and x.y",
+        Question: "The\\ terms\\ of\\ expression\\ 4.x^2 - 3.x.y\\ are:",
+        Option1: "4.x^2\\ and\\ -3.x.y",
+        Option2: "4.x^2\\ and\\ 3.x.y",
+        Option3: "4.x^2\\ and\\ -x.y",
+        Option4: "x^2\\ and\\ x.y",
         CorrectOption: "1",
         MarksAllocated: "1",
         DifficultyLevel: "Easy"
     },
     {
         id: "5",
-        Question: "Factors of -5.x^2.y^2.z are",
+        Question: "Factors\\ of\\ -5.x^2.y^2.z\\ are",
         Option1: "-5.x.y.z",
         Option2: "-5.x^2.y.z",
         Option3: "-5.x.x.y.y.z",
@@ -45,7 +45,7 @@ const questions = [
     },
     {
         id: "6",
-        Question: "Coefficient of x in -9.x.y^2.z is",
+        Question: "Coefficient\\ of\\ x\\ in\\ -9.x.y^2.z\\ is",
         Option1: "9.y.z",
         Option2: "-9.y.z",
         Option3: "9.y^2.z",
@@ -56,7 +56,7 @@ const questions = [
     },
     {
         id: "7",
-        Question: "The subtraction of 5 times of y from x is",
+        Question: "The\\ subtraction\\ of\\ 5\\ times\\ of\\ y\\ from\\ x\\ is",
         Option1: "5x - y",
         Option2: "y - 5x",
         Option3: "x - 5y",
@@ -67,7 +67,7 @@ const questions = [
     },
     {
         id: "8",
-        Question: "The side length of the top of a square table is x. The expression for perimeter is:",
+        Question: "The\\ side\\ length\\ of\\ the\\ top\\ of\\ a\\ square\\ table\\ is\\ x\\.\\ The\\ expression\\ for\\ perimeter\\ is:\\",
         Option1: "4 + x",
         Option2: "2x",
         Option3: "4x",
@@ -78,7 +78,7 @@ const questions = [
     },
     {
         id: "9",
-        Question: "The expression for the number of diagonals that we can make from one vertex of a n sided polygon is:",
+        Question: "The\\ expression\\ for\\ the\\ number\\ of\\ diagonals\\ that\\ we\\ can\\ make\\ from\\ one\\ vertex\\ of\\ a\\ n\\ sided\\ polygon\\ is:\\",
         Option1: "2n + 1",
         Option2: "n - 2",
         Option3: "5n + 2",
@@ -89,7 +89,7 @@ const questions = [
     },
     {
         id: "10",
-        Question: "123.x^2.y - 138.x^2.y is a like term of",
+        Question: "123.x^2.y - 138.x^2.y\\ is\\ a\\ like\\ term\\ of",
         Option1: "10.x.y",
         Option2: "-15.x.y",
         Option3: "-15.x.y^2",
@@ -100,7 +100,7 @@ const questions = [
     },
     {
         id: "11",
-        Question: "The value of 3.x^2 - 5.x + 3 when x = 1 is",
+        Question: "The\\ value\\ of\\ 3.x^2 - 5.x + 3 when\\ x = 1\\ is",
         Option1: "1",
         Option2: "0",
         Option3: "-1",
@@ -133,7 +133,7 @@ const questions = [
     },
     {
         id: "14",
-        Question: "(2^2)^n = (2^3)^4, then n = ",
+        Question: "(2^2)^n = (2^3)^4, then\\ n\\ = ",
         Option1: "4",
         Option2: "3",
         Option3: "12",
@@ -148,7 +148,7 @@ const questions = [
         Option1: "5/7",
         Option2: "-5/7",
         Option3: "7/5",
-        Option4: "None of these",
+        Option4: "None\\ of\\ these",
         CorrectOption: "2",
         MarksAllocated: "1",
         DifficultyLevel: "Medium"
@@ -159,7 +159,7 @@ const questions = [
         Option1: "3^10",
         Option2: "3^2",
         Option3: "3^5",
-        Option4: "None of these",
+        Option4: "None\\ of\\ these",
         CorrectOption: "1",
         MarksAllocated: "1",
         DifficultyLevel: "Medium"
@@ -170,7 +170,7 @@ const questions = [
         Option1: "2^2",
         Option2: "2^4",
         Option3: "0",
-        Option4: "None of these",
+        Option4: "None\\ of\\ these",
         CorrectOption: "3",
         MarksAllocated: "1",
         DifficultyLevel: "Hard"
@@ -181,7 +181,7 @@ const questions = [
         Option1: "3",
         Option2: "3^2",
         Option3: "3^0",
-        Option4: "None of these",
+        Option4: "None\\ of\\ these",
         CorrectOption: "3",
         MarksAllocated: "1",
         DifficultyLevel: "Hard"
@@ -221,7 +221,7 @@ const questions = [
     },
     {
         id: "22",
-        Question: "Find the mode for the data set, which shows the heights( in inches ) of 10 students in a class: 60, 65, 63, 62, 65, 70, 62, 68, 60, 65",
+        Question: "Find\\ the\\ mode\\ for\\ the\\ data\\ set,\\ which\\ shows\\ the\\ heights( in\\ inches\\ )\\ of\\ 10\\ students\\ in\\ a\\ class: 60,\\ 65,\\ 63,\\ 62,\\ 65,\\ 70,\\ 62,\\ 68,\\ 60,\\ 65",
         Option1: "62",
         Option2: "65",
         Option3: "70",
@@ -234,6 +234,3 @@ const questions = [
   
   
 export default questions;
-//   export default (diff, n = 4) =>
-//           Promise.resolve(qbank.filter(qs=>qs.DifficultyLevel.includes(diff)).sort(() => 0.5 - Math.random()).slice(0, n));
-  

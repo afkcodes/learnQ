@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
 import Difficulty from "./components/Difficulty";
+import { MathComponent } from "mathjax-react";
+
 
 function App() {
   const [quizStatus, setQuizStatus] = React.useState("opened");
@@ -83,7 +85,10 @@ function App() {
           <div className="quiz__question">
             <p>
               Q.{quizState.qNo}: &nbsp; &nbsp;
-              {quizState.quizQuestions[currentQuestion]?.["Question"]}
+              <MathComponent
+                tex={String.raw`${quizState.quizQuestions[currentQuestion]?.["Question"]}`}
+                display={false}
+              />
             </p>
           </div>
           <div
@@ -96,25 +101,41 @@ function App() {
               <label htmlFor="option1" className="answer__options">
                 <input type="radio" id="option1" name="learnQ" value={1} />
                 <span className="options__text">
-                  {quizState.quizQuestions[currentQuestion]?.["Option1"]}
+                  <MathComponent
+                    className="option_mathjax"
+                    tex={String.raw`${quizState.quizQuestions[currentQuestion]?.["Option1"]}`}
+                    display={false}
+                  />
                 </span>
               </label>
               <label htmlFor="option2" className="answer__options">
                 <input type="radio" id="option2" name="learnQ" value={2} />
                 <span className="options__text">
-                  {quizState.quizQuestions[currentQuestion]?.["Option2"]}
+                  <MathComponent
+                    className="option_mathjax"
+                    tex={String.raw`${quizState.quizQuestions[currentQuestion]?.["Option2"]}`}
+                    display={false}
+                  />
                 </span>
               </label>
               <label htmlFor="option3" className="answer__options">
                 <input type="radio" id="option3" name="learnQ" value={3} />
                 <span className="options__text">
-                  {quizState.quizQuestions[currentQuestion]?.["Option3"]}
+                  <MathComponent
+                    className="option_mathjax"
+                    tex={String.raw`${quizState.quizQuestions[currentQuestion]?.["Option3"]}`}
+                    display={false}
+                  />
                 </span>
               </label>
               <label htmlFor="option4" className="answer__options">
                 <input type="radio" id="option4" name="learnQ" value={4} />
                 <span className="options__text">
-                  {quizState.quizQuestions[currentQuestion]?.["Option4"]}
+                  <MathComponent
+                    className="option_mathjax"
+                    tex={String.raw`${quizState.quizQuestions[currentQuestion]?.["Option4"]}`}
+                    display={false}
+                  />
                 </span>
               </label>
             </form>
@@ -132,7 +153,9 @@ function App() {
                 }));
                 console.log(`currentQuestion ${currentQuestion - 1}`);
                 let answer = quizState.userAnswers[currentQuestion - 1];
-                document.getElementById(`option${answer}`).checked = true;
+                if (answer !== 0) {
+                  document.getElementById(`option${answer}`).checked = true;
+                }
               }}
             >
               Previous Question
@@ -173,8 +196,41 @@ function App() {
         </div>
       ) : (
         <div className="results">
-          Score: {score}
-          Percentage Score : {percentScore}
+          <div className="results__header">
+            <p>Quiz Results</p>
+          </div>
+          <div className="score__details">
+            <p>Score: {score}</p>
+            <p>Percentage Score: {percentScore}</p>
+          </div>
+          {quizState.quizQuestions.map((question) => {
+            return (
+              <div key={question.id} className="question__container">
+                <div className="user__question">
+                  <div>
+                    <MathComponent
+                      className="option_mathjax"
+                      tex={String.raw`${question.Question}`}
+                      display={false}
+                    />
+                  </div>
+                  <div>
+                    Answer:&nbsp; &nbsp; &nbsp;
+                    <MathComponent
+                      className="option_mathjax"
+                      tex={String.raw`${
+                        question[`Option${question.CorrectOption}`]
+                      }`}
+                      display={false}
+                    />
+                  </div>
+                  <div>
+                    {question.DifficultyLevel}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
       )}
     </div>
